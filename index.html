@@ -4,21 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Axis Crest Partners</title>
+  <meta name="description" content="Axis Crest Partners is an independent advisory platform focused on cross-border infrastructure, industrial and strategic transactions across MENA and selected international markets." />
+  <link rel="icon" type="image/svg+xml" href="axis-crest-icon.svg" />
+
   <style>
     :root {
       --navy-1: #08111f;
       --navy-2: #0d1d35;
-      --navy-3: #132949;
-      --gold: #d8b36a;
-      --gold-soft: #ecd7a7;
-      --teal: #2ca7a1;
+      --navy-3: #14254a;
+      --navy-4: #1a315d;
+      --gold: #c7a252;
+      --gold-soft: #dcc28c;
       --white: #f8fbff;
-      --text-soft: #cfd8e6;
+      --text-soft: #d6deea;
       --text-mid: #aeb9ca;
+      --text-dark: #24344f;
       --line: rgba(255,255,255,0.10);
-      --card: rgba(255,255,255,0.08);
-      --card-strong: rgba(255,255,255,0.12);
-      --shadow: 0 18px 50px rgba(0,0,0,0.18);
+      --line-dark: rgba(20,37,74,0.10);
+      --card-dark: rgba(255,255,255,0.08);
+      --card-light: #ffffff;
+      --shadow-dark: 0 18px 50px rgba(0,0,0,0.18);
+      --shadow-light: 0 12px 34px rgba(20,37,74,0.08);
     }
 
     * {
@@ -31,11 +37,10 @@
 
     body {
       margin: 0;
-      font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       color: var(--white);
       background:
-        radial-gradient(circle at top left, rgba(44,167,161,0.14), transparent 24%),
-        radial-gradient(circle at top right, rgba(216,179,106,0.10), transparent 22%),
+        radial-gradient(circle at top left, rgba(199,162,82,0.08), transparent 22%),
         linear-gradient(135deg, var(--navy-1) 0%, var(--navy-2) 48%, var(--navy-3) 100%);
       line-height: 1.6;
     }
@@ -43,6 +48,11 @@
     a {
       color: inherit;
       text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
     }
 
     .container {
@@ -54,43 +64,45 @@
     .topbar {
       position: sticky;
       top: 0;
-      z-index: 50;
+      z-index: 100;
       backdrop-filter: blur(12px);
-      background: rgba(8,17,31,0.68);
+      background: rgba(8,17,31,0.78);
       border-bottom: 1px solid var(--line);
     }
 
     .topbar-inner {
+      min-height: 94px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
-      padding: 18px 0;
+      gap: 24px;
+      padding: 14px 0;
     }
 
     .brand {
       display: flex;
       align-items: center;
+      flex-shrink: 0;
     }
 
     .site-logo {
-      height: 62px;
+      height: 64px;
       width: auto;
-      display: block;
       object-fit: contain;
     }
 
     .nav {
       display: flex;
       align-items: center;
-      gap: 26px;
+      gap: 30px;
       flex-wrap: wrap;
     }
 
     .nav a {
       font-size: 14px;
+      letter-spacing: 0.3px;
       color: var(--text-soft);
-      transition: 0.25s ease;
+      transition: color 0.25s ease;
     }
 
     .nav a:hover {
@@ -100,7 +112,7 @@
     .hero {
       position: relative;
       overflow: hidden;
-      padding: 110px 0 86px;
+      padding: 120px 0 88px;
     }
 
     .hero::before {
@@ -108,9 +120,9 @@
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(rgba(6, 12, 22, 0.52), rgba(6, 12, 22, 0.78)),
+        linear-gradient(rgba(6, 12, 22, 0.48), rgba(6, 12, 22, 0.78)),
         url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
-      opacity: 0.34;
+      opacity: 0.32;
       z-index: 0;
     }
 
@@ -119,100 +131,107 @@
       z-index: 1;
       display: grid;
       grid-template-columns: 1.35fr 0.85fr;
-      gap: 40px;
+      gap: 42px;
       align-items: center;
     }
 
     .eyebrow {
       display: inline-block;
-      margin-bottom: 18px;
-      padding: 8px 14px;
+      margin-bottom: 20px;
+      padding: 9px 15px;
       border-radius: 999px;
       background: rgba(255,255,255,0.08);
       border: 1px solid rgba(255,255,255,0.10);
       color: var(--gold-soft);
       font-size: 12px;
-      letter-spacing: 1.4px;
+      letter-spacing: 1.6px;
       text-transform: uppercase;
     }
 
     .hero h1 {
       margin: 0 0 18px;
-      font-size: 56px;
-      line-height: 1.08;
+      font-size: 60px;
+      line-height: 1.06;
       font-weight: 700;
+      letter-spacing: -1px;
       max-width: 820px;
-      letter-spacing: -0.5px;
     }
 
     .hero p {
       margin: 0;
-      max-width: 770px;
+      max-width: 760px;
       font-size: 20px;
-      color: #dde6f0;
+      color: var(--text-soft);
     }
 
     .hero-card {
-      background: rgba(255,255,255,0.09);
+      background: rgba(255,255,255,0.08);
       border: 1px solid rgba(255,255,255,0.12);
       border-radius: 22px;
-      padding: 28px;
-      box-shadow: var(--shadow);
+      padding: 30px;
+      box-shadow: var(--shadow-dark);
       backdrop-filter: blur(10px);
     }
 
     .hero-card h3 {
       margin-top: 0;
-      margin-bottom: 12px;
-      font-size: 20px;
-      color: white;
+      margin-bottom: 14px;
+      font-size: 22px;
+      color: var(--white);
     }
 
     .hero-card p {
-      font-size: 15px;
-      color: #d5dfeb;
       margin-bottom: 14px;
+      font-size: 15px;
+      color: var(--text-soft);
     }
 
     .hero-card ul {
       margin: 0;
       padding-left: 18px;
-      color: #d5dfeb;
+      color: var(--text-soft);
     }
 
     .hero-card li {
-      margin-bottom: 8px;
+      margin-bottom: 9px;
     }
 
-    .section {
-      padding: 74px 0;
+    .light-section {
+      background: linear-gradient(180deg, #f8fafc 0%, #f2f5fa 100%);
+      color: var(--text-dark);
+      padding: 78px 0;
+    }
+
+    .light-section.alt {
+      background: #ffffff;
     }
 
     .section-intro {
-      margin-bottom: 26px;
+      margin-bottom: 28px;
     }
 
     .section-intro h2 {
       margin: 0 0 10px;
-      font-size: 34px;
-      color: white;
+      font-size: 36px;
+      color: var(--navy-3);
+      letter-spacing: -0.4px;
     }
 
     .section-intro p {
       margin: 0;
-      max-width: 770px;
+      max-width: 780px;
       font-size: 17px;
-      color: var(--text-soft);
+      color: #5f6f86;
     }
 
-    .glass-box {
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.11);
+    .about-box {
+      background: var(--card-light);
+      border: 1px solid var(--line-dark);
       border-radius: 22px;
-      padding: 34px;
-      color: #edf3f9;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(8px);
+      padding: 36px;
+      box-shadow: var(--shadow-light);
+      font-size: 17px;
+      color: #33445f;
     }
 
     .cards {
@@ -222,23 +241,23 @@
     }
 
     .card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.11), rgba(255,255,255,0.07));
-      border: 1px solid rgba(255,255,255,0.11);
+      background: #ffffff;
+      border: 1px solid var(--line-dark);
       border-radius: 20px;
-      padding: 26px;
-      box-shadow: 0 14px 36px rgba(0,0,0,0.12);
+      padding: 28px;
+      box-shadow: var(--shadow-light);
     }
 
     .card h3 {
       margin-top: 0;
       margin-bottom: 12px;
-      color: white;
-      font-size: 21px;
+      color: var(--navy-3);
+      font-size: 22px;
     }
 
     .card p {
       margin: 0;
-      color: #d8e1eb;
+      color: #4f607a;
       font-size: 15px;
     }
 
@@ -249,45 +268,50 @@
     }
 
     .focus-item {
-      background: rgba(255,255,255,0.09);
-      border: 1px solid rgba(255,255,255,0.10);
+      background: #ffffff;
+      border: 1px solid var(--line-dark);
       border-radius: 18px;
-      padding: 22px;
+      padding: 24px 20px;
       text-align: center;
-      color: white;
-      font-weight: 600;
-      box-shadow: 0 10px 26px rgba(0,0,0,0.10);
+      color: var(--navy-3);
+      font-weight: 700;
+      box-shadow: var(--shadow-light);
     }
 
-    .contact-wrap {
-      padding-top: 0;
+    .dark-section {
+      padding: 78px 0;
+      color: var(--white);
+      background:
+        radial-gradient(circle at top right, rgba(199,162,82,0.10), transparent 24%),
+        linear-gradient(135deg, var(--navy-2) 0%, var(--navy-1) 100%);
     }
 
     .contact-box {
-      background: linear-gradient(135deg, rgba(216,179,106,0.18), rgba(44,167,161,0.14));
+      background: linear-gradient(135deg, rgba(199,162,82,0.17), rgba(20,37,74,0.18));
       border: 1px solid rgba(255,255,255,0.12);
       border-radius: 24px;
-      padding: 38px;
+      padding: 40px;
       display: grid;
       grid-template-columns: 1.2fr 0.8fr;
-      gap: 28px;
+      gap: 30px;
       align-items: center;
-      box-shadow: var(--shadow);
+      box-shadow: var(--shadow-dark);
     }
 
     .contact-box h2 {
       margin: 0 0 10px;
-      color: white;
-      font-size: 32px;
+      font-size: 34px;
+      color: var(--white);
     }
 
     .contact-box p {
       margin: 0;
-      color: #dce5ef;
+      color: var(--text-soft);
+      font-size: 16px;
     }
 
     .contact-card {
-      background: rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.08);
       border: 1px solid rgba(255,255,255,0.12);
       border-radius: 18px;
       padding: 22px;
@@ -295,7 +319,7 @@
 
     .contact-card div {
       margin-bottom: 12px;
-      color: #edf3f9;
+      color: #eef4fb;
     }
 
     .contact-card div:last-child {
@@ -303,7 +327,7 @@
     }
 
     .contact-card a {
-      color: white;
+      color: var(--white);
       font-weight: 700;
     }
 
@@ -313,7 +337,12 @@
       color: var(--text-mid);
       font-size: 14px;
       text-align: center;
-      margin-top: 40px;
+    }
+
+    @media (max-width: 1100px) {
+      .hero h1 {
+        font-size: 50px;
+      }
     }
 
     @media (max-width: 980px) {
@@ -328,29 +357,39 @@
         font-size: 42px;
       }
 
-      .nav {
-        display: none;
+      .site-logo {
+        height: 58px;
       }
 
-      .site-logo {
-        height: 56px;
+      .nav {
+        display: none;
       }
     }
 
     @media (max-width: 640px) {
+      .topbar-inner {
+        min-height: 82px;
+      }
+
+      .site-logo {
+        height: 50px;
+      }
+
       .hero {
-        padding: 84px 0 60px;
+        padding: 92px 0 62px;
       }
 
       .hero h1 {
         font-size: 34px;
+        line-height: 1.12;
       }
 
       .hero p {
         font-size: 18px;
       }
 
-      .section {
+      .light-section,
+      .dark-section {
         padding: 56px 0;
       }
 
@@ -358,8 +397,10 @@
         font-size: 28px;
       }
 
-      .site-logo {
-        height: 48px;
+      .about-box,
+      .card,
+      .contact-box {
+        padding: 26px;
       }
     }
   </style>
@@ -369,7 +410,7 @@
   <header class="topbar">
     <div class="container topbar-inner">
       <div class="brand">
-        <img src="logo-axis-crest.png" alt="Axis Crest Partners Logo" class="site-logo">
+        <img src="axis-crest-logo-dark.svg" alt="Axis Crest Partners" class="site-logo">
       </div>
 
       <nav class="nav">
@@ -394,7 +435,7 @@
       <div class="hero-card">
         <h3>Positioning</h3>
         <p>
-          A focused advisory platform operating at the intersection of market access, transaction clarity and execution support.
+          A focused advisory platform operating at the intersection of market access, transaction clarity and execution capability.
         </p>
         <ul>
           <li>Cross-border opportunity development</li>
@@ -406,7 +447,7 @@
     </div>
   </section>
 
-  <section class="section" id="about">
+  <section class="light-section" id="about">
     <div class="container">
       <div class="section-intro">
         <h2>About</h2>
@@ -415,18 +456,18 @@
         </p>
       </div>
 
-      <div class="glass-box">
-        Axis Crest Partners advises on opportunities spanning infrastructure, industrial platforms, strategic manufacturing and selected emerging market transactions. The focus is not only on identifying opportunities, but on helping shape them into credible, financeable and executable propositions for sponsors, capital providers and strategic counterparties.
+      <div class="about-box">
+        Axis Crest Partners advises on opportunities spanning infrastructure, industrial platforms, strategic manufacturing and selected emerging market transactions. The platform is designed to help shape opportunities into credible, financeable and executable propositions for sponsors, capital providers and strategic counterparties, particularly where regional interface and cross-border coordination are critical to success.
       </div>
     </div>
   </section>
 
-  <section class="section" id="services" style="padding-top:0;">
+  <section class="light-section alt" id="services" style="padding-top: 0;">
     <div class="container">
       <div class="section-intro">
         <h2>Core Services</h2>
         <p>
-          Selective advisory support tailored to transactions requiring coordination between sponsors, institutions, operators and regional market stakeholders.
+          Selective advisory support tailored to transactions requiring alignment between sponsors, institutions, operators and regional stakeholders.
         </p>
       </div>
 
@@ -434,14 +475,14 @@
         <div class="card">
           <h3>Deal Origination & Market Access</h3>
           <p>
-            Identification and prioritization of relevant opportunities through targeted relationships, regional knowledge and selective commercial access across MENA-linked markets.
+            Identification and prioritization of relevant opportunities through targeted relationships, regional knowledge and selective access across MENA-linked markets.
           </p>
         </div>
 
         <div class="card">
           <h3>Strategic Advisory & Execution Support</h3>
           <p>
-            Advisory support for transaction positioning, commercial planning and execution path definition in situations where complexity and stakeholder alignment matter.
+            Advisory support for transaction positioning, commercial planning and execution path definition in situations where complexity and timing matter.
           </p>
         </div>
 
@@ -462,11 +503,13 @@
     </div>
   </section>
 
-  <section class="section" id="focus" style="padding-top:0;">
+  <section class="light-section" id="focus" style="padding-top: 0;">
     <div class="container">
       <div class="section-intro">
         <h2>Sector Focus</h2>
-        <p>Primary areas of interest and transaction focus.</p>
+        <p>
+          Primary areas of interest and transaction focus.
+        </p>
       </div>
 
       <div class="focus-grid">
@@ -478,7 +521,7 @@
     </div>
   </section>
 
-  <section class="section contact-wrap" id="contact">
+  <section class="dark-section" id="contact">
     <div class="container">
       <div class="contact-box">
         <div>
