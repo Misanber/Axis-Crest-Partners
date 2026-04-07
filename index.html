@@ -1,297 +1,1006 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Axis Crest Partners | Industrial Platform MENA</title>
+  <meta
+    name="description"
+    content="Axis Crest Partners originates and executes infrastructure and industrial platforms across MENA, combining local execution with international capital."
+  />
+  <style>
+    :root{
+      --navy:#081327;
+      --navy-2:#0d1f3b;
+      --navy-3:#132b4f;
+      --gold:#c8a45c;
+      --gold-2:#d7b46f;
+      --white:#ffffff;
+      --text:#e8edf5;
+      --text-soft:#bac7da;
+      --ink:#10213f;
+      --light:#f4f7fb;
+      --card:#ffffff;
+      --line:rgba(255,255,255,0.08);
+      --shadow:0 18px 45px rgba(0,0,0,0.14);
+      --radius:18px;
+      --max:1220px;
+      --transition:220ms ease;
+    }
 
-<title>Axis Crest Partners | Industrial Platform MENA</title>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
 
-<style>
-:root{
-  --navy:#0a1a33;
-  --navy-deep:#050d1a;
-  --gold:#c7a252;
-  --white:#ffffff;
-  --text-soft:#b7c3d6;
-  --light:#f4f7fb;
-}
+    html{
+      scroll-behavior:smooth;
+    }
 
-*{margin:0;padding:0;box-sizing:border-box;}
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      background:var(--navy);
+      color:var(--white);
+      line-height:1.6;
+      overflow-x:hidden;
+    }
 
-body{
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
-  background:#050d1a;
-  color:white;
-  line-height:1.6;
-}
+    img{
+      max-width:100%;
+      display:block;
+    }
 
-.container{
-  width:90%;
-  max-width:1200px;
-  margin:auto;
-}
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
 
-/* HEADER */
-.topbar{
-  position:fixed;
-  width:100%;
-  background:rgba(5,13,26,0.9);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid rgba(255,255,255,0.05);
-  z-index:10;
-}
+    .container{
+      width:min(90%, var(--max));
+      margin:0 auto;
+    }
 
-.topbar-inner{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:20px 0;
-}
+    .section{
+      padding:110px 0;
+    }
 
-.site-logo{height:60px;}
+    .section-light{
+      background:var(--light);
+      color:var(--ink);
+    }
 
-.nav{display:flex;gap:30px;}
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 16px;
+      border:1px solid rgba(255,255,255,0.14);
+      border-radius:999px;
+      color:var(--gold-2);
+      font-size:12px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      background:rgba(255,255,255,0.06);
+    }
 
-.nav a{
-  color:var(--text-soft);
-  text-decoration:none;
-  font-size:14px;
-}
+    .section-light .eyebrow{
+      border-color:rgba(16,33,63,0.1);
+      background:rgba(16,33,63,0.04);
+      color:#9e7733;
+    }
 
-.nav a:hover{color:var(--gold);}
+    h1,h2,h3{
+      line-height:1.1;
+      letter-spacing:-0.02em;
+    }
 
-/* HERO */
-.hero{
-  height:100vh;
-  display:flex;
-  align-items:center;
-  background:
-  linear-gradient(rgba(5,13,26,0.8),rgba(5,13,26,0.9)),
-  url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1400&q=80');
-  background-size:cover;
-  background-position:center;
-}
+    h1{
+      font-size:clamp(42px, 6vw, 76px);
+      max-width:760px;
+      margin:22px 0 18px;
+    }
 
-.hero h1{
-  font-size:68px;
-  margin-bottom:20px;
-}
+    h2{
+      font-size:clamp(30px, 4vw, 46px);
+      margin-bottom:18px;
+    }
 
-.hero p{
-  max-width:600px;
-  color:var(--text-soft);
-  margin-bottom:30px;
-}
+    h3{
+      font-size:22px;
+      margin-bottom:14px;
+    }
 
-.btn{
-  padding:14px 26px;
-  border-radius:999px;
-  text-decoration:none;
-  font-weight:600;
-}
+    p.lead{
+      font-size:clamp(18px, 2vw, 22px);
+      max-width:760px;
+      color:var(--text-soft);
+    }
 
-.btn-primary{
-  background:var(--gold);
-  color:#0a1730;
-}
+    .section-light p.lead{
+      color:#4a5d80;
+    }
 
-.btn-secondary{
-  border:1px solid rgba(255,255,255,0.2);
-  color:white;
-  margin-left:10px;
-}
+    .topbar{
+      position:fixed;
+      inset:0 0 auto 0;
+      z-index:1000;
+      background:rgba(8,19,39,0.82);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--line);
+    }
 
-/* SECTIONS */
-section{
-  padding:110px 0;
-}
+    .topbar-inner{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:24px;
+      min-height:84px;
+    }
 
-.section-light{
-  background:var(--light);
-  color:var(--navy);
-}
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      min-width:0;
+    }
 
-.card{
-  background:white;
-  padding:30px;
-  border-radius:14px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.05);
-}
+    .site-logo{
+      height:58px;
+      width:auto;
+      flex-shrink:0;
+    }
 
-.grid-2{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:25px;
-  margin-top:30px;
-}
+    .brand-copy{
+      font-size:13px;
+      color:var(--text-soft);
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
 
-/* IMAGE BLOCK */
-.image-block{
-  height:420px;
-  background:url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1400&q=80');
-  background-size:cover;
-  background-position:center;
-  border-radius:14px;
-}
+    .nav{
+      display:flex;
+      align-items:center;
+      gap:28px;
+    }
 
-/* INVESTOR */
-.investor-box{
-  text-align:center;
-  max-width:600px;
-  margin:auto;
-}
+    .nav a{
+      font-size:14px;
+      color:var(--text-soft);
+      transition:color var(--transition);
+    }
 
-/* CONTACT */
-.contact-box{
-  background:rgba(255,255,255,0.05);
-  padding:40px;
-  border-radius:18px;
-}
+    .nav a:hover{
+      color:var(--gold-2);
+    }
 
-/* FOOTER */
-.footer{
-  text-align:center;
-  padding:40px;
-  color:#8fa1c2;
-}
+    .nav-cta{
+      padding:12px 18px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.12);
+    }
 
-@media(max-width:900px){
-  .grid-2{grid-template-columns:1fr;}
-  .hero h1{font-size:40px;}
-  .nav{display:none;}
-}
-</style>
+    .hero{
+      position:relative;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      padding:150px 0 90px;
+      background:
+        linear-gradient(110deg, rgba(8,19,39,0.90) 0%, rgba(8,19,39,0.78) 38%, rgba(8,19,39,0.88) 100%),
+        url("https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1800&q=80") center/cover no-repeat;
+    }
+
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:auto 0 0 0;
+      height:160px;
+      background:linear-gradient(to bottom, rgba(8,19,39,0) 0%, rgba(8,19,39,1) 100%);
+      pointer-events:none;
+    }
+
+    .hero-grid{
+      position:relative;
+      z-index:1;
+      display:grid;
+      grid-template-columns:1.1fr 0.9fr;
+      gap:56px;
+      align-items:end;
+    }
+
+    .hero-copy{
+      padding-top:30px;
+    }
+
+    .credibility{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin:26px 0 34px;
+      color:var(--text-soft);
+      font-size:14px;
+    }
+
+    .credibility span{
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .cta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      min-height:50px;
+      padding:0 22px;
+      border-radius:999px;
+      border:1px solid transparent;
+      font-weight:600;
+      transition:transform var(--transition), background var(--transition), border-color var(--transition), color var(--transition), box-shadow var(--transition);
+      cursor:pointer;
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+    }
+
+    .btn-primary{
+      background:var(--gold);
+      color:#13233d;
+      box-shadow:0 12px 28px rgba(200,164,92,0.22);
+    }
+
+    .btn-primary:hover{
+      background:var(--gold-2);
+    }
+
+    .btn-secondary{
+      color:var(--white);
+      border-color:rgba(255,255,255,0.18);
+      background:rgba(255,255,255,0.06);
+    }
+
+    .btn-secondary:hover{
+      border-color:rgba(255,255,255,0.34);
+      background:rgba(255,255,255,0.11);
+    }
+
+    .hero-panel{
+      padding:30px;
+      border-radius:24px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.05));
+      border:1px solid rgba(255,255,255,0.1);
+      box-shadow:var(--shadow);
+    }
+
+    .hero-panel h3{
+      color:var(--white);
+      margin-bottom:16px;
+    }
+
+    .hero-panel p{
+      color:var(--text-soft);
+      margin-bottom:18px;
+    }
+
+    .hero-list{
+      list-style:none;
+      display:grid;
+      gap:14px;
+    }
+
+    .hero-list li{
+      display:flex;
+      gap:12px;
+      color:var(--text);
+      font-size:15px;
+    }
+
+    .hero-list li::before{
+      content:"";
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:var(--gold);
+      margin-top:9px;
+      flex-shrink:0;
+    }
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:18px;
+      margin-top:34px;
+    }
+
+    .stat{
+      padding:20px;
+      border-radius:18px;
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .stat strong{
+      display:block;
+      font-size:28px;
+      color:var(--white);
+      margin-bottom:4px;
+    }
+
+    .stat span{
+      font-size:13px;
+      color:var(--text-soft);
+    }
+
+    .section-head{
+      display:flex;
+      justify-content:space-between;
+      gap:30px;
+      align-items:end;
+      margin-bottom:34px;
+    }
+
+    .section-head p{
+      max-width:620px;
+      color:#50627f;
+    }
+
+    .cards-2,
+    .cards-3,
+    .cards-4{
+      display:grid;
+      gap:24px;
+    }
+
+    .cards-2{
+      grid-template-columns:repeat(2, 1fr);
+    }
+
+    .cards-3{
+      grid-template-columns:repeat(3, 1fr);
+    }
+
+    .cards-4{
+      grid-template-columns:repeat(4, 1fr);
+    }
+
+    .card{
+      background:var(--card);
+      color:var(--ink);
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:0 14px 34px rgba(16,33,63,0.08);
+      border:1px solid rgba(16,33,63,0.06);
+      transition:transform var(--transition), box-shadow var(--transition);
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 20px 42px rgba(16,33,63,0.12);
+    }
+
+    .card p{
+      color:#526482;
+    }
+
+    .icon-badge{
+      width:46px;
+      height:46px;
+      border-radius:14px;
+      display:grid;
+      place-items:center;
+      margin-bottom:18px;
+      background:linear-gradient(180deg, rgba(200,164,92,0.18), rgba(200,164,92,0.08));
+      color:#8d6b2d;
+      font-weight:700;
+      font-size:14px;
+    }
+
+    .approach{
+      background:
+        linear-gradient(120deg, rgba(8,19,39,0.94), rgba(13,31,59,0.94)),
+        url("https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1800&q=80") center/cover no-repeat;
+    }
+
+    .approach-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:36px;
+      align-items:center;
+    }
+
+    .approach-card{
+      padding:34px;
+      border-radius:24px;
+      background:rgba(255,255,255,0.07);
+      border:1px solid rgba(255,255,255,0.1);
+      box-shadow:var(--shadow);
+    }
+
+    .approach-card p{
+      color:var(--text-soft);
+      margin-bottom:18px;
+    }
+
+    .approach-points{
+      list-style:none;
+      display:grid;
+      gap:14px;
+    }
+
+    .approach-points li{
+      color:var(--text);
+      display:flex;
+      gap:12px;
+    }
+
+    .approach-points li::before{
+      content:"—";
+      color:var(--gold-2);
+      font-weight:700;
+    }
+
+    .case-card{
+      overflow:hidden;
+      padding:0;
+    }
+
+    .case-image{
+      height:220px;
+      background-size:cover;
+      background-position:center;
+    }
+
+    .case-body{
+      padding:28px;
+    }
+
+    .case-meta{
+      display:inline-block;
+      font-size:12px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:#8e6c2f;
+      margin-bottom:10px;
+    }
+
+    .investor-box{
+      max-width:860px;
+      margin:0 auto;
+      text-align:center;
+      padding:40px;
+      border-radius:28px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+      border:1px solid rgba(255,255,255,0.1);
+      box-shadow:var(--shadow);
+    }
+
+    .investor-box p{
+      max-width:680px;
+      margin:0 auto 26px;
+      color:var(--text-soft);
+    }
+
+    .download-note{
+      margin-top:16px;
+      color:var(--text-soft);
+      font-size:14px;
+    }
+
+    .contact-wrap{
+      display:grid;
+      grid-template-columns:0.9fr 1.1fr;
+      gap:30px;
+      align-items:start;
+    }
+
+    .contact-panel{
+      padding:32px;
+      border-radius:24px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.05));
+      border:1px solid rgba(255,255,255,0.1);
+      box-shadow:var(--shadow);
+    }
+
+    .contact-panel p{
+      color:var(--text-soft);
+      margin-bottom:18px;
+    }
+
+    .contact-list{
+      list-style:none;
+      display:grid;
+      gap:12px;
+      margin:24px 0 0;
+    }
+
+    .contact-list li{
+      color:var(--text);
+      display:flex;
+      gap:12px;
+    }
+
+    .contact-list li::before{
+      content:"•";
+      color:var(--gold);
+      font-weight:700;
+    }
+
+    .form-card{
+      padding:32px;
+      border-radius:24px;
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.1);
+      box-shadow:var(--shadow);
+    }
+
+    .form-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+    }
+
+    .field{
+      display:grid;
+      gap:8px;
+      margin-bottom:16px;
+    }
+
+    .field-full{
+      grid-column:1 / -1;
+    }
+
+    label{
+      font-size:14px;
+      color:var(--text-soft);
+    }
+
+    input, select, textarea{
+      width:100%;
+      border:1px solid rgba(255,255,255,0.12);
+      border-radius:14px;
+      background:rgba(255,255,255,0.96);
+      color:#10213f;
+      font:inherit;
+      padding:14px 16px;
+      outline:none;
+      transition:border-color var(--transition), box-shadow var(--transition);
+    }
+
+    input:focus, select:focus, textarea:focus{
+      border-color:rgba(200,164,92,0.9);
+      box-shadow:0 0 0 4px rgba(200,164,92,0.12);
+    }
+
+    textarea{
+      min-height:140px;
+      resize:vertical;
+    }
+
+    .form-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      align-items:center;
+      margin-top:8px;
+    }
+
+    .form-note{
+      font-size:13px;
+      color:var(--text-soft);
+    }
+
+    .footer{
+      border-top:1px solid rgba(255,255,255,0.08);
+      background:#071123;
+      padding:34px 0;
+    }
+
+    .footer-inner{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .footer-brand{
+      color:var(--text-soft);
+      font-size:14px;
+    }
+
+    .footer-brand strong{
+      display:block;
+      color:var(--white);
+      font-size:16px;
+      margin-bottom:4px;
+    }
+
+    .footer-links{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+      color:var(--text-soft);
+      font-size:14px;
+    }
+
+    @media (max-width: 1080px){
+      .hero-grid,
+      .approach-grid,
+      .contact-wrap{
+        grid-template-columns:1fr;
+      }
+
+      .cards-4{
+        grid-template-columns:repeat(2, 1fr);
+      }
+
+      .cards-3{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width: 820px){
+      .topbar-inner{
+        min-height:74px;
+      }
+
+      .brand-copy,
+      .nav{
+        display:none;
+      }
+
+      .hero{
+        padding-top:130px;
+      }
+
+      .stats,
+      .cards-2,
+      .cards-4,
+      .form-grid{
+        grid-template-columns:1fr;
+      }
+
+      .section{
+        padding:88px 0;
+      }
+
+      .hero-panel,
+      .investor-box,
+      .contact-panel,
+      .form-card{
+        padding:24px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<header class="topbar">
-<div class="container topbar-inner">
-<img src="axis-crest-logo-dark-clean.svg" class="site-logo">
-<nav class="nav">
-<a href="#platforms">Platforms</a>
-<a href="#cases">Cases</a>
-<a href="#investors">Investors</a>
-<a href="#contact">Contact</a>
-</nav>
-</div>
-</header>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <img src="assets/axis-crest-logo-dark-clean.svg" class="site-logo" alt="Axis Crest Partners logo" />
+        <div class="brand-copy">Cross-Border Industrial Platform</div>
+      </div>
 
-<section class="hero">
-<div class="container">
+      <nav class="nav">
+        <a href="#platforms">Platforms</a>
+        <a href="#approach">Approach</a>
+        <a href="#cases">Case Studies</a>
+        <a href="#investors">Investors</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<h1>Industrial Platform Across MENA</h1>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">MENA · Strategic Platforms · Execution-Backed</div>
+          <h1>Industrial Platform Building Across MENA</h1>
+          <p class="lead">
+            Axis Crest Partners originates and advances infrastructure and industrial platforms, combining local execution capability with international capital and strategic alignment.
+          </p>
 
-<p>
-We originate and execute infrastructure and industrial platforms, combining local execution with international capital.
-</p>
+          <div class="credibility">
+            <span>Infrastructure & Rail</span>
+            <span>Industrial Localization</span>
+            <span>Manufacturing Platforms</span>
+            <span>Cross-Border Structuring</span>
+          </div>
 
-<a href="#contact" class="btn btn-primary">Start a Conversation</a>
-<a href="#investors" class="btn btn-secondary">Investor Materials</a>
+          <div class="cta-row">
+            <a href="#contact" class="btn btn-primary">Start a Conversation</a>
+            <a href="#investors" class="btn btn-secondary">Investor Materials</a>
+          </div>
 
-</div>
-</section>
+          <div class="stats">
+            <div class="stat">
+              <strong>MENA</strong>
+              <span>Core strategic focus and execution geography</span>
+            </div>
+            <div class="stat">
+              <strong>Multi-Asset</strong>
+              <span>Industrial, manufacturing and infrastructure exposure</span>
+            </div>
+            <div class="stat">
+              <strong>Selective</strong>
+              <span>Targeted alignment with investors and strategic partners</span>
+            </div>
+          </div>
+        </div>
 
-<section class="section-light" id="platforms">
-<div class="container">
+        <aside class="hero-panel">
+          <h3>Positioning</h3>
+          <p>
+            A platform-led approach designed to bridge opportunity origination, industrial execution and strategic capital across emerging markets.
+          </p>
+          <ul class="hero-list">
+            <li>Cross-border platform development</li>
+            <li>Execution-backed industrial opportunities</li>
+            <li>Strategic partnerships and market entry</li>
+            <li>Institutional and investor-facing structuring</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
 
-<h2>Strategic Platforms</h2>
+    <section id="platforms" class="section section-light">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Strategic Platforms</div>
+            <h2>Core Vertical Exposure</h2>
+          </div>
+          <p>
+            A focused platform architecture built around sectors where execution, localization and capital structuring can create outsized strategic value.
+          </p>
+        </div>
 
-<div class="grid-2">
-<div class="card"><h3>Infrastructure & Rail</h3></div>
-<div class="card"><h3>Fiber Manufacturing</h3></div>
-<div class="card"><h3>Textile Platform</h3></div>
-<div class="card"><h3>Industrial Expansion</h3></div>
-</div>
+        <div class="cards-4">
+          <article class="card">
+            <div class="icon-badge">IR</div>
+            <h3>Infrastructure & Rail</h3>
+            <p>
+              Execution-backed capabilities across transport infrastructure, industrial delivery and localization-linked opportunities.
+            </p>
+          </article>
 
-</div>
-</section>
+          <article class="card">
+            <div class="icon-badge">FM</div>
+            <h3>Fiber Manufacturing</h3>
+            <p>
+              Industrial platform development aligned with localized production, regional demand and sovereign industrial agendas.
+            </p>
+          </article>
 
-<section>
-<div class="container grid-2">
+          <article class="card">
+            <div class="icon-badge">TP</div>
+            <h3>Textile Platform</h3>
+            <p>
+              Export-oriented manufacturing with structured operating logic, production scalability and international commercial alignment.
+            </p>
+          </article>
 
-<div>
-<h2>Execution-Backed Approach</h2>
-<p>
-Axis Crest operates across infrastructure and industrial verticals, bridging international capital with local execution.
-</p>
-</div>
+          <article class="card">
+            <div class="icon-badge">IE</div>
+            <h3>Industrial Expansion</h3>
+            <p>
+              Market entry, regional scaling and platform development across North Africa, GCC and broader MENA corridors.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<div class="image-block"></div>
+    <section id="approach" class="section approach">
+      <div class="container approach-grid">
+        <div>
+          <div class="eyebrow">Execution-Backed Approach</div>
+          <h2>Built Around Real Market Access and Platform Logic</h2>
+          <p class="lead">
+            Axis Crest operates where capital, industrial execution and regional opportunity intersect — with a focus on structured entry, scalable assets and long-term strategic optionality.
+          </p>
+        </div>
 
-</div>
-</section>
+        <div class="approach-card">
+          <p>
+            The model is not based on passive advisory alone. It is designed around selective platform development and strategic engagement with aligned counterparties.
+          </p>
+          <ul class="approach-points">
+            <li>Origination linked to practical regional execution</li>
+            <li>Platform framing instead of isolated project pitching</li>
+            <li>Selective investor and partner alignment</li>
+            <li>Structured progression from introduction to opportunity shaping</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-<section class="section-light" id="cases">
-<div class="container">
+    <section id="cases" class="section section-light">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Selected Case Studies</div>
+            <h2>Representative Platform Themes</h2>
+          </div>
+          <p>
+            Illustrative examples of the type of industrial and infrastructure opportunities the platform is built to originate, structure and scale.
+          </p>
+        </div>
 
-<h2>Selected Case Studies</h2>
+        <div class="cards-2">
+          <article class="card case-card">
+            <div class="case-image" style="background-image:url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1400&q=80');"></div>
+            <div class="case-body">
+              <span class="case-meta">Infrastructure Platform</span>
+              <h3>Execution-Linked Infrastructure Positioning</h3>
+              <p>
+                Structured around industrial delivery capability, local market relevance and cross-border partnership development.
+              </p>
+            </div>
+          </article>
 
-<div class="grid-2">
-<div class="card"><h3>Infrastructure Platform</h3></div>
-<div class="card"><h3>Fiber Manufacturing</h3></div>
-<div class="card"><h3>Textile Platform</h3></div>
-<div class="card"><h3>Industrial Expansion</h3></div>
-</div>
+          <article class="card case-card">
+            <div class="case-image" style="background-image:url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1400&q=80');"></div>
+            <div class="case-body">
+              <span class="case-meta">Fiber Manufacturing</span>
+              <h3>Localized Production Platform Development</h3>
+              <p>
+                Focused on industrial localization, regional supply logic and scalable manufacturing potential.
+              </p>
+            </div>
+          </article>
 
-</div>
-</section>
+          <article class="card case-card">
+            <div class="case-image" style="background-image:url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1400&q=80');"></div>
+            <div class="case-body">
+              <span class="case-meta">Textile Platform</span>
+              <h3>Export-Oriented Industrial Operations</h3>
+              <p>
+                Manufacturing model built around operational rollout, production discipline and international offtake alignment.
+              </p>
+            </div>
+          </article>
 
-<section id="investors">
-<div class="container investor-box">
+          <article class="card case-card">
+            <div class="case-image" style="background-image:url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1400&q=80');"></div>
+            <div class="case-body">
+              <span class="case-meta">Industrial Expansion</span>
+              <h3>Cross-Border Growth and Market Entry</h3>
+              <p>
+                Platform expansion logic connecting capital, industrial execution and MENA market access.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<h2>Investor Materials</h2>
+    <section id="investors" class="section">
+      <div class="container">
+        <div class="investor-box">
+          <div class="eyebrow">Investor Materials</div>
+          <h2>Access the High-Level Overview</h2>
+          <p>
+            A concise overview of active themes, platform rationale and partnership logic is available through the investor teaser.
+          </p>
+          <div class="cta-row" style="justify-content:center;">
+            <a href="teaser/axis-crest-teaser.pdf" target="_blank" class="btn btn-primary">Download Investor Teaser</a>
+            <a href="#contact" class="btn btn-secondary">Discuss Alignment</a>
+          </div>
+          <div class="download-note">
+            Place your PDF at: <strong>/teaser/axis-crest-teaser.pdf</strong>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<p>
-A high-level overview of active platforms and opportunities is available.
-</p>
+    <section id="contact" class="section">
+      <div class="container contact-wrap">
+        <div class="contact-panel">
+          <div class="eyebrow">Engage With Axis Crest</div>
+          <h2>Start the Conversation</h2>
+          <p>
+            We engage selectively with investors, strategic partners and industrial counterparties aligned with cross-border opportunities across MENA.
+          </p>
+          <p>
+            Use the form to share your interest, company profile and area of focus. Relevant inquiries are reviewed directly and followed up promptly.
+          </p>
 
-<a href="teaser/axis-crest-teaser.pdf" target="_blank" class="btn btn-primary">
-Download Investor Teaser
-</a>
+          <ul class="contact-list">
+            <li>Investment opportunities</li>
+            <li>Strategic partnerships</li>
+            <li>Industrial platform discussions</li>
+            <li>Investor teaser requests</li>
+          </ul>
+        </div>
 
-</div>
-</section>
+        <div class="form-card">
+          <form action="https://formspree.io/f/xnjowbwn" method="POST">
+            <input type="hidden" name="_subject" value="New Axis Crest inquiry">
+            <input type="hidden" name="_next" value="https://misanber.github.io/Axis-Crest-Partners/thank-you.html">
 
-<section class="section-light" id="contact">
-<div class="container">
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" type="text" name="name" placeholder="Your name" required>
+              </div>
 
-<div class="contact-box">
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" placeholder="Your email" required>
+              </div>
 
-<h2>Engage With Axis Crest</h2>
+              <div class="field">
+                <label for="company">Company</label>
+                <input id="company" type="text" name="company" placeholder="Company or organization">
+              </div>
 
-<form action="https://formspree.io/f/xxxxabcd" method="POST">
+              <div class="field">
+                <label for="interest">Type of inquiry</label>
+                <select id="interest" name="interest">
+                  <option value="Investment">Investment</option>
+                  <option value="Partnership">Strategic Partnership</option>
+                  <option value="Platform">Industrial Platform</option>
+                  <option value="Advisory">Advisory</option>
+                </select>
+              </div>
 
-<input type="text" placeholder="Name" required style="width:100%;padding:12px;margin:10px 0;">
-<input type="email" placeholder="Email" required style="width:100%;padding:12px;margin:10px 0;">
-<textarea placeholder="Message" style="width:100%;padding:12px;margin:10px 0;"></textarea>
+              <div class="field field-full">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Share a few lines on your objectives, focus and relevant geography."></textarea>
+              </div>
+            </div>
 
-<button class="btn btn-primary">Submit</button>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Submit Inquiry</button>
+              <div class="form-note">Relevant inquiries are typically reviewed within one business day.</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
-</form>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <strong>Axis Crest Partners</strong>
+        Industrial Platform | MENA | Cross-Border Strategic Positioning
+      </div>
 
-</div>
+      <div class="footer-links">
+        <a href="#platforms">Platforms</a>
+        <a href="#cases">Case Studies</a>
+        <a href="#investors">Investors</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
 
-</div>
-</section>
-
-<footer class="footer">
-Axis Crest Partners<br>
-© 2026
-</footer>
-
-<!-- CRISP CHAT -->
-<script type="text/javascript">
-window.$crisp=[];
-window.CRISP_WEBSITE_ID="20da632f-1455-4cc3-9d25-9e3b141c4aa4";
-(function(){
-d=document;
-s=d.createElement("script");
-s.src="https://client.crisp.chat/l.js";
-s.async=1;
-d.getElementsByTagName("head")[0].appendChild(s);
-})();
-</script>
-
+  <script type="text/javascript">
+    window.$crisp = [];
+    window.CRISP_WEBSITE_ID = "20da632f-1455-4cc3-9d25-9e3b141c4aa4";
+    (function () {
+      const d = document;
+      const s = d.createElement("script");
+      s.src = "https://client.crisp.chat/l.js";
+      s.async = 1;
+      d.getElementsByTagName("head")[0].appendChild(s);
+    })();
+  </script>
 </body>
 </html>
