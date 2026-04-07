@@ -1,0 +1,37 @@
+<svg width="1200" height="320" viewBox="0 0 1200 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .white { fill: #f8fafc; }
+      .gold { fill: #d6b56b; }
+      .gold-stroke { stroke: #d6b56b; stroke-width: 10; fill: none; stroke-linecap: square; stroke-linejoin: miter; }
+      .gold-line { stroke: #d6b56b; stroke-width: 3; }
+      .title { font: 700 86px 'Arial', 'Helvetica Neue', Helvetica, sans-serif; letter-spacing: 2px; }
+      .sub { font: 400 42px Georgia, 'Times New Roman', serif; letter-spacing: 12px; }
+    </style>
+  </defs>
+
+  <g transform="translate(70,40)">
+    <polygon points="120,0 240,120 120,240 0,120" class="gold-stroke"/>
+    <path d="M140 28 L185 98 L160 98 L138 58 L138 168" class="gold" />
+    <path d="M138 168 Q138 198 126 218 L112 218 Q126 194 126 168 Z" class="gold"/>
+    <path d="M135 58
+             Q88 58 88 98
+             Q88 128 112 128
+             L182 128
+             L182 146
+             L108 146
+             Q70 146 58 122
+             Q51 108 51 95
+             Q51 58 79 39
+             Q99 25 131 25
+             Z" class="white"/>
+    <path d="M44 122 L82 92 L82 112 L62 124 L98 214 L74 196 Z" class="gold"/>
+  </g>
+
+  <g transform="translate(370,105)">
+    <text x="0" y="90" class="title white">AXIS CREST</text>
+    <line x1="0" y1="150" x2="95" y2="150" class="gold-line"/>
+    <text x="120" y="165" class="sub gold">PARTNERS</text>
+    <line x1="505" y1="150" x2="600" y2="150" class="gold-line"/>
+  </g>
+</svg>
