@@ -1,27 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Axis Crest Partners</title>
-
-  <link rel="icon" type="image/svg+xml" href="axis-crest-icon.svg" />
 
   <style>
     :root {
       --navy: #0f1e3a;
       --navy-deep: #08111f;
       --gold: #c7a252;
-      --gold-soft: #e3c98d;
       --white: #ffffff;
       --text-soft: #cfd8e6;
-      --text-mid: #94a3b8;
       --light-bg: #f5f7fb;
-      --shadow: 0 20px 50px rgba(0,0,0,0.15);
-    }
-
-    * {
-      box-sizing: border-box;
     }
 
     body {
@@ -42,8 +33,8 @@
     .topbar {
       position: sticky;
       top: 0;
-      backdrop-filter: blur(10px);
-      background: rgba(8,17,31,0.85);
+      background: rgba(8,17,31,0.9);
+      backdrop-filter: blur(8px);
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
@@ -55,7 +46,7 @@
     }
 
     .site-logo {
-      height: 75px;
+      height: 78px;
     }
 
     .nav {
@@ -64,9 +55,9 @@
     }
 
     .nav a {
-      font-size: 14px;
       color: var(--text-soft);
-      transition: 0.3s;
+      font-size: 14px;
+      text-decoration: none;
     }
 
     .nav a:hover {
@@ -76,32 +67,28 @@
     /* HERO */
 
     .hero {
-      padding: 120px 0 90px;
-      position: relative;
+      padding: 110px 0 80px;
     }
 
     .hero h1 {
-      font-size: 56px;
+      font-size: 52px;
       margin-bottom: 20px;
-      line-height: 1.1;
     }
 
     .hero p {
       font-size: 20px;
       color: var(--text-soft);
-      max-width: 750px;
+      max-width: 700px;
     }
 
     .badge {
       display: inline-block;
+      margin-bottom: 15px;
       padding: 8px 14px;
       border-radius: 999px;
       background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.1);
       font-size: 12px;
-      letter-spacing: 1px;
-      color: var(--gold-soft);
-      margin-bottom: 20px;
+      color: #e3c98d;
     }
 
     .hero-grid {
@@ -113,10 +100,9 @@
 
     .hero-card {
       background: rgba(255,255,255,0.06);
-      padding: 28px;
-      border-radius: 20px;
+      padding: 25px;
+      border-radius: 18px;
       border: 1px solid rgba(255,255,255,0.1);
-      box-shadow: var(--shadow);
     }
 
     /* LIGHT SECTIONS */
@@ -124,23 +110,14 @@
     .section-light {
       background: var(--light-bg);
       color: var(--navy);
-      padding: 80px 0;
-    }
-
-    .section-light h2 {
-      font-size: 34px;
-      margin-bottom: 10px;
-    }
-
-    .section-light p {
-      color: #5f6f86;
+      padding: 70px 0;
     }
 
     .card {
       background: white;
       padding: 25px;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      border-radius: 14px;
+      margin-top: 20px;
     }
 
     .grid-2 {
@@ -153,47 +130,34 @@
       display: grid;
       grid-template-columns: repeat(4,1fr);
       gap: 15px;
+      margin-top: 20px;
     }
 
     .focus-item {
       background: white;
-      padding: 20px;
+      padding: 18px;
+      border-radius: 12px;
       text-align: center;
-      border-radius: 14px;
       font-weight: bold;
-    }
-
-    /* EXPERIENCE */
-
-    .experience {
-      background: white;
-      padding: 30px;
-      border-radius: 20px;
-      margin-top: 30px;
-    }
-
-    .experience ul {
-      padding-left: 20px;
-      color: #4f607a;
     }
 
     /* CONTACT */
 
     .contact {
-      padding: 80px 0;
+      padding: 70px 0;
     }
 
     .contact-box {
       background: rgba(255,255,255,0.06);
-      padding: 30px;
-      border-radius: 20px;
+      padding: 25px;
+      border-radius: 18px;
       border: 1px solid rgba(255,255,255,0.1);
     }
 
     .footer {
       text-align: center;
-      padding: 30px;
-      color: var(--text-mid);
+      padding: 25px;
+      color: #94a3b8;
     }
 
     @media(max-width:900px){
@@ -206,7 +170,7 @@
       }
 
       .hero h1 {
-        font-size: 38px;
+        font-size: 36px;
       }
     }
 
@@ -215,9 +179,13 @@
 
 <body>
 
+<!-- HEADER -->
+
 <header class="topbar">
   <div class="container topbar-inner">
-    <img src="axis-crest-logo-primary.svg" class="site-logo">
+
+    <!-- 🔴 LOGO CORRECTO -->
+    <img src="axis-crest-logo-dark-clean.svg" class="site-logo" alt="Axis Crest Partners">
 
     <nav class="nav">
       <a href="#about">About</a>
@@ -226,8 +194,11 @@
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
     </nav>
+
   </div>
 </header>
+
+<!-- HERO -->
 
 <section class="hero">
   <div class="container hero-grid">
@@ -238,7 +209,7 @@
       <h1>Independent Advisory for Infrastructure, Industrial and Strategic Transactions</h1>
 
       <p>
-        Axis Crest Partners supports sponsors, operators and capital providers in identifying, structuring and advancing cross-border opportunities with a particular focus on MENA-linked transactions.
+        Axis Crest Partners supports sponsors, operators and capital providers in identifying, structuring and advancing cross-border opportunities.
       </p>
     </div>
 
@@ -255,45 +226,34 @@
   </div>
 </section>
 
+<!-- ABOUT -->
+
 <section class="section-light" id="about">
   <div class="container">
     <h2>About</h2>
 
     <div class="card">
-      Axis Crest Partners is an independent advisory platform focused on infrastructure, industrial and strategic transactions across emerging markets. The platform operates at the intersection of market access, transaction structuring and execution capability.
+      Independent advisory platform focused on infrastructure, industrial and strategic investments across emerging markets.
     </div>
   </div>
 </section>
+
+<!-- SERVICES -->
 
 <section class="section-light" id="services">
   <div class="container">
     <h2>Core Services</h2>
 
     <div class="grid-2">
-
-      <div class="card">
-        <h3>Deal Origination</h3>
-        <p>Identification of opportunities through targeted access and strategic positioning.</p>
-      </div>
-
-      <div class="card">
-        <h3>Strategic Advisory</h3>
-        <p>Transaction structuring and execution planning across complex environments.</p>
-      </div>
-
-      <div class="card">
-        <h3>Capital Interface</h3>
-        <p>Alignment between investors, sponsors and operators.</p>
-      </div>
-
-      <div class="card">
-        <h3>Cross-border Structuring</h3>
-        <p>Development of partnerships and market entry strategies.</p>
-      </div>
-
+      <div class="card">Deal Origination</div>
+      <div class="card">Strategic Advisory</div>
+      <div class="card">Capital Interface</div>
+      <div class="card">Cross-border Structuring</div>
     </div>
   </div>
 </section>
+
+<!-- FOCUS -->
 
 <section class="section-light" id="focus">
   <div class="container">
@@ -308,27 +268,30 @@
   </div>
 </section>
 
+<!-- EXPERIENCE -->
+
 <section class="section-light" id="experience">
   <div class="container">
     <h2>Selected Experience</h2>
 
-    <div class="experience">
+    <div class="card">
       <ul>
-        <li>Cross-border infrastructure advisory across North Africa</li>
-        <li>Industrial platform development and localization strategies</li>
-        <li>Strategic market entry structuring across MENA</li>
-        <li>Investor-facing execution support and positioning</li>
+        <li>Cross-border infrastructure advisory</li>
+        <li>Industrial platform development</li>
+        <li>Market entry structuring across MENA</li>
+        <li>Investor-facing execution support</li>
       </ul>
     </div>
   </div>
 </section>
+
+<!-- CONTACT -->
 
 <section class="contact" id="contact">
   <div class="container">
     <div class="contact-box">
       <h2>Contact</h2>
       <p>Email: misanber@gmail.com</p>
-      <p>MENA · International</p>
     </div>
   </div>
 </section>
